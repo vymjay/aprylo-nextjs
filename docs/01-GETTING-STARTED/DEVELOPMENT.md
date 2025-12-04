@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This guide covers the development workflow, coding standards, and best practices for VB Cart.
+This guide covers the development workflow, coding standards, and best practices for Aprylo.
 
 ## Development Workflow
 
@@ -634,7 +634,7 @@ NEXT_PUBLIC_API_URL=https://vbcart.com/api
 // lib/config.ts
 const config = {
   app: {
-    name: process.env.NEXT_PUBLIC_APP_NAME || 'VB Cart',
+    name: process.env.NEXT_PUBLIC_APP_NAME || 'Aprylo',
     url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
     env: process.env.NEXT_PUBLIC_APP_ENV || 'development',
   },

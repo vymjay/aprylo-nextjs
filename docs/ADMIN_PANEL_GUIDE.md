@@ -2,7 +2,7 @@
 
 ## Overview
 
-The VB Cart Admin Panel provides a comprehensive interface for managing the e-commerce platform. It includes product management, user management, and analytics capabilities.
+The Aprylo Admin Panel provides a comprehensive interface for managing the e-commerce platform. It includes product management, user management, and analytics capabilities.
 
 ## Access Control
 

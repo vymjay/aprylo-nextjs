@@ -2,7 +2,7 @@
 
 ## Overview
 
-VB Cart uses Supabase for database management with a structured migration approach to ensure data integrity and version control of schema changes.
+Aprylo uses Supabase for database management with a structured migration approach to ensure data integrity and version control of schema changes.
 
 ## Migration Strategy
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the comprehensive lazy loading implementation for the VB Cart application. The lazy loading strategy improves performance by loading content only when needed, reducing initial bundle size and improving user experience.
+This document outlines the comprehensive lazy loading implementation for the Aprylo application. The lazy loading strategy improves performance by loading content only when needed, reducing initial bundle size and improving user experience.
 
 ## Features Implemented
 

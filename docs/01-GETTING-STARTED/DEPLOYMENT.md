@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide covers deploying VB Cart to production environments, with detailed instructions for Vercel (recommended), Netlify, and custom server deployments.
+This guide covers deploying Aprylo to production environments, with detailed instructions for Vercel (recommended), Netlify, and custom server deployments.
 
 ## Pre-deployment Checklist
 
@@ -531,7 +531,7 @@ lhci autorun --upload.target=temporary-public-storage
 # Setup uptime monitoring
 curl -X POST "https://api.uptimerobot.com/v2/newMonitor" \
   -H "Content-Type: application/x-www-form-urlencoded" \
-  -d "api_key=YOUR_API_KEY&format=json&type=1&url=https://your-domain.com&friendly_name=VB Cart"
+  -d "api_key=YOUR_API_KEY&format=json&type=1&url=https://your-domain.com&friendly_name=Aprylo"
 ```
 
 ## Rollback Strategy
@@ -636,4 +636,4 @@ sudo logrotate -d /etc/logrotate.d/vb-cart
 
 ---
 
-*Deployment complete! Your VB Cart application is now live in production. 🚀*
+*Deployment complete! Your Aprylo application is now live in production. 🚀*

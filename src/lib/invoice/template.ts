@@ -249,7 +249,7 @@ export function generateInvoiceHTML(order: Order, user: User): string {
             <!-- Header -->
             <div class="header">
                 <div class="company-info">
-                    <div class="company-name">VB Cart</div>
+                    <div class="company-name">Aprylo</div>
                     <div class="company-details">
                         Premium Fashion E-commerce<br>
                         123 Fashion Street<br>
@@ -344,7 +344,7 @@ export function generateInvoiceHTML(order: Order, user: User): string {
 
             <!-- Footer -->
             <div class="footer">
-                <p>Thank you for shopping with VB Cart!</p>
+                <p>Thank you for shopping with Aprylo!</p>
                 <p>For any queries regarding this invoice, please contact us at support@vbcart.com</p>
                 <p style="margin-top: 10px;">
                     <strong>Terms & Conditions:</strong> Payment is due within 30 days of invoice date. 

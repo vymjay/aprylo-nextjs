@@ -6,7 +6,7 @@ interface LoadingProps {
   className?: string
 }
 
-export default function Loading({ size = 'md', text = 'Loading VB Cart...', className = '' }: LoadingProps) {
+export default function Loading({ size = 'md', text = 'Loading Aprylo...', className = '' }: LoadingProps) {
   const sizeClasses = {
     sm: 'h-4 w-4',
     md: 'h-8 w-8',

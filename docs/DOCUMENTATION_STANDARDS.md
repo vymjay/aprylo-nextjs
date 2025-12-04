@@ -230,4 +230,4 @@ For questions about documentation standards:
 
 **Remember**: Good documentation is as important as good code. Following these standards ensures our documentation remains useful, maintainable, and professional.
 
-*This document is part of the VB Cart project documentation standards and must be followed by all contributors.*
+*This document is part of the Aprylo project documentation standards and must be followed by all contributors.*

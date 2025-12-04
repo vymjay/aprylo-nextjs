@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the comprehensive enhancements implemented to improve performance, security, accessibility, and developer experience across the VB Cart application.
+This document outlines the comprehensive enhancements implemented to improve performance, security, accessibility, and developer experience across the Aprylo application.
 
 ## 🎯 **Enhancements Implemented**
 

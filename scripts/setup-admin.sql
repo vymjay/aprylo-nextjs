@@ -1,4 +1,4 @@
--- Admin User Setup Script for VB Cart
+-- Admin User Setup Script for Aprylo
 -- Run this script after creating a regular user account to give them admin privileges
 
 -- First, find your user ID by checking the User table with your email

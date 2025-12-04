@@ -8,7 +8,7 @@ export default function TermsOfService() {
       </h1>
 
       <p className="mb-4">
-        Welcome to VB Cart. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions.
+        Welcome to Aprylo. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions.
       </p>
 
       <h2 className="text-2xl font-semibold mb-3 mt-6">Use of Our Website</h2>
@@ -28,12 +28,12 @@ export default function TermsOfService() {
 
       <h2 className="text-2xl font-semibold mb-3 mt-6">Intellectual Property</h2>
       <p className="mb-4">
-        All content on the website, including text, images, logos, and designs, is the property of VB Cart or its licensors and is protected by intellectual property laws.
+        All content on the website, including text, images, logos, and designs, is the property of Aprylo or its licensors and is protected by intellectual property laws.
       </p>
 
       <h2 className="text-2xl font-semibold mb-3 mt-6">Limitation of Liability</h2>
       <p className="mb-4">
-        VB Cart shall not be liable for any damages arising from the use or inability to use the website or products purchased.
+        Aprylo shall not be liable for any damages arising from the use or inability to use the website or products purchased.
       </p>
 
       <h2 className="text-2xl font-semibold mb-3 mt-6">Changes to Terms</h2>

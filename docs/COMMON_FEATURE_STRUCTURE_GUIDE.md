@@ -1,6 +1,6 @@
 # Common Feature Structure Guide
 
-This guide explains the standardized approach for organizing features in the VB Cart application. All features should follow these patterns for consistency and maintainability.
+This guide explains the standardized approach for organizing features in the Aprylo application. All features should follow these patterns for consistency and maintainability.
 
 ## 📁 Directory Structure
 
@@ -372,4 +372,4 @@ See the following components for reference implementations:
 - `src/lib/common-patterns.ts` - Common pattern definitions
 - `src/lib/feature-generator.ts` - Feature generator utility
 
-This structure ensures that all features in the VB Cart application follow consistent patterns, making the codebase easier to maintain and extend.
+This structure ensures that all features in the Aprylo application follow consistent patterns, making the codebase easier to maintain and extend.

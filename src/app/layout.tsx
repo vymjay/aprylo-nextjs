@@ -26,19 +26,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'VB Cart - Premium Fashion Store | Designer Clothing for Men, Women & Children',
-    template: '%s | VB Cart - Premium Fashion Store'
+    default: 'Aprylo - Premium Fashion Store | Designer Clothing for Men, Women & Children',
+    template: '%s | Aprylo - Premium Fashion Store'
   },
-  description: 'Discover the latest fashion trends with VB Cart. Premium designer clothing, accessories, and lifestyle products for men, women, and children. Fast shipping, easy returns, and exceptional quality.',
+  description: 'Discover the latest fashion trends with Aprylo. Premium designer clothing, accessories, and lifestyle products for men, women, and children. Fast shipping, easy returns, and exceptional quality.',
   keywords: [
-    'fashion', 'clothing', 'ecommerce', 'VB Cart', 'premium fashion',
+    'fashion', 'clothing', 'ecommerce', 'Aprylo', 'premium fashion',
     'designer clothes', 'men fashion', 'women fashion', 'children clothing',
     'online shopping', 'fashion store', 'trendy clothes', 'quality apparel',
     'fashion accessories', 'lifestyle products', 'brand clothing'
   ],
-  authors: [{ name: 'VB Cart Team', url: 'https://vbcart.com' }],
-  creator: 'VB Cart',
-  publisher: 'VB Cart',
+  authors: [{ name: 'Aprylo Team', url: 'https://vbcart.com' }],
+  creator: 'Aprylo',
+  publisher: 'Aprylo',
   manifest: '/manifest.json',
   metadataBase: new URL('https://vbcart.com'), // Replace with your actual domain
   alternates: {
@@ -48,22 +48,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://vbcart.com',
-    title: 'VB Cart - Premium Fashion Store',
-    description: 'Discover the latest fashion trends with VB Cart. Premium designer clothing for men, women, and children.',
-    siteName: 'VB Cart',
+    title: 'Aprylo - Premium Fashion Store',
+    description: 'Discover the latest fashion trends with Aprylo. Premium designer clothing for men, women, and children.',
+    siteName: 'Aprylo',
     images: [
       {
         url: '/logos/vb_logo.png',
         width: 1200,
         height: 630,
-        alt: 'VB Cart Logo - Premium Fashion Store',
+        alt: 'Aprylo Logo - Premium Fashion Store',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VB Cart - Premium Fashion Store',
-    description: 'Discover the latest fashion trends with VB Cart. Premium designer clothing for men, women, and children.',
+    title: 'Aprylo - Premium Fashion Store',
+    description: 'Discover the latest fashion trends with Aprylo. Premium designer clothing for men, women, and children.',
     images: ['/logos/vb_logo.png'],
     creator: '@vbcart', // Replace with your actual Twitter handle
   },
@@ -98,8 +98,8 @@ export const metadata: Metadata = {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'VB Cart',
-    'application-name': 'VB Cart',
+    'apple-mobile-web-app-title': 'Aprylo',
+    'application-name': 'Aprylo',
     'msapplication-TileColor': '#3b82f6',
     'msapplication-TileImage': '/icons/icon-144x144.png',
     'theme-color': '#3b82f6',

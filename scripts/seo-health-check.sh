@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# SEO Health Check Script for VB Cart
-echo "🔍 VB Cart SEO Health Check"
+# SEO Health Check Script for Aprylo
+echo "🔍 Aprylo SEO Health Check"
 echo "=========================="
 
 # Check if required files exist

@@ -1,7 +1,7 @@
 # Repository Standards & Common Patterns
 
 ## Overview
-This document establishes consistent patterns and standards for the VB Cart codebase to ensure maintainability, performance, and developer experience.
+This document establishes consistent patterns and standards for the Aprylo codebase to ensure maintainability, performance, and developer experience.
 
 ## 🏗️ Project Structure Standards
 

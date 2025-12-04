@@ -1,4 +1,4 @@
-# VB Cart - Premium Fashion E-commerce Platform
+# Aprylo - Premium Fashion E-commerce Platform
 
 A modern, full-stack fashion e-commerce platform built with Next.js 15, TypeScript, and Supabase, featuring advanced state management, real-time updates, and a comprehensive design system.
 
@@ -425,7 +425,7 @@ Special thanks to:
 
 **Happy Shopping! 🛍️**
 
-*Built with ❤️ by the VB Cart Team*
+*Built with ❤️ by the Aprylo Team*
 
 ---
 

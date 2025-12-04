@@ -1,6 +1,6 @@
-# VB Cart Documentation
+# Aprylo Documentation
 
-Welcome to the VB Cart project documentation. This documentation follows a structured approach to help developers understand, maintain, and extend the application.
+Welcome to the Aprylo project documentation. This documentation follows a structured approach to help developers understand, maintain, and extend the application.
 
 ## 📁 Documentation Structure
 
@@ -69,7 +69,7 @@ Step-by-step guides for specific tasks and procedures.
 
 ## 🏗️ Project Overview
 
-VB Cart is a modern e-commerce application built with:
+Aprylo is a modern e-commerce application built with:
 - **Frontend**: Next.js 15, React, TypeScript, Tailwind CSS
 - **Backend**: Next.js API Routes, Supabase
 - **Database**: PostgreSQL (via Supabase)

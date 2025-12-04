@@ -2,7 +2,7 @@
 
 ## Overview
 
-VB Cart provides a comprehensive REST API built with Next.js API routes and Supabase. All endpoints follow RESTful conventions and return JSON responses.
+Aprylo provides a comprehensive REST API built with Next.js API routes and Supabase. All endpoints follow RESTful conventions and return JSON responses.
 
 ## Base URL
 

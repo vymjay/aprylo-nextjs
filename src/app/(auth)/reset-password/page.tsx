@@ -9,7 +9,7 @@ export default function ResetPasswordPage() {
       <div className="flex flex-col pt-8 pb-2 px-4 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <Link href="/" className="flex justify-center">
-            <h2 className="text-3xl font-bold text-primary">VB Cart</h2>
+            <h2 className="text-3xl font-bold text-primary">Aprylo</h2>
           </Link>
           <h2 className="mt-6 text-center text-2xl font-bold text-gray-900">
             Reset Your Password

@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
       </h1>
 
       <p className="mb-4">
-        At VB Cart, your privacy is our priority. This Privacy Policy explains how we collect, use, and protect your personal information when you visit or make a purchase from our website.
+        At Aprylo, your privacy is our priority. This Privacy Policy explains how we collect, use, and protect your personal information when you visit or make a purchase from our website.
       </p>
 
       <h2 className="text-2xl font-semibold mb-3 mt-6">Information We Collect</h2>
