@@ -1,0 +1,37 @@
+# Robots.txt for VB Cart
+
+User-agent: *
+Allow: /
+
+# Allow all crawlers to access the site
+Allow: /products
+Allow: /categories
+Allow: /search
+Allow: /about
+Allow: /contact
+Allow: /privacy
+Allow: /terms
+
+# Disallow crawling of admin areas and user accounts
+Disallow: /admin
+Disallow: /account
+Disallow: /api/
+Disallow: /checkout
+Disallow: /cart
+
+# Disallow crawling of internal files
+Disallow: /*.json$
+Disallow: /*/search
+Disallow: /*?*
+
+# Allow crawling of images and static assets
+Allow: /images/
+Allow: /icons/
+Allow: /logos/
+Allow: /_next/static/
+
+# Sitemap location
+Sitemap: https://vbcart.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to search engines)
+Crawl-delay: 1
