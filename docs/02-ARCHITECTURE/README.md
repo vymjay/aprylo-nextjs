@@ -1,6 +1,6 @@
 # Architecture
 
-This section covers the technical architecture, system design, and component relationships of the VB Cart application.
+This section covers the technical architecture, system design, and component relationships of the Aprylo application.
 
 ## 📋 Contents
 

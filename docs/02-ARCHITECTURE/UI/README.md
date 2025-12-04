@@ -1,6 +1,6 @@
 # UI/UX Documentation
 
-This directory contains comprehensive UI/UX documentation for VB Cart, covering design systems, component libraries, and user experience guidelines.
+This directory contains comprehensive UI/UX documentation for Aprylo, covering design systems, component libraries, and user experience guidelines.
 
 ## 📚 Documentation Overview
 
@@ -12,7 +12,7 @@ This directory contains comprehensive UI/UX documentation for VB Cart, covering 
 
 ## 🎨 Design Philosophy
 
-VB Cart's UI is built on four core principles:
+Aprylo's UI is built on four core principles:
 
 ### 1. **Simplicity**
 - Clean, uncluttered interfaces
@@ -406,4 +406,4 @@ npm run type-check       # TypeScript validation
 
 ---
 
-*Beautiful, accessible, and performant UI components for VB Cart e-commerce platform.*
+*Beautiful, accessible, and performant UI components for Aprylo e-commerce platform.*

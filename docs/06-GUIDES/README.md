@@ -1,6 +1,6 @@
 # Guides
 
-This section contains step-by-step guides for specific tasks and procedures in the VB Cart project.
+This section contains step-by-step guides for specific tasks and procedures in the Aprylo project.
 
 ## 📋 Available Guides
 

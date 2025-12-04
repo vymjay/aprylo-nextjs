@@ -1,7 +1,7 @@
-# SEO Optimization Guide for VB Cart
+# SEO Optimization Guide for Aprylo
 
 ## Overview
-Comprehensive SEO setup to improve search engine visibility, rankings, and ensure your VB Cart logo appears in Google search results.
+Comprehensive SEO setup to improve search engine visibility, rankings, and ensure your Aprylo logo appears in Google search results.
 
 ## 1. ✅ Issues Fixed
 
@@ -22,12 +22,12 @@ Comprehensive SEO setup to improve search engine visibility, rankings, and ensur
 ```typescript
 export const metadata: Metadata = {
   title: {
-    default: 'VB Cart - Premium Fashion Store | Designer Clothing for Men, Women & Children',
-    template: '%s | VB Cart - Premium Fashion Store'
+    default: 'Aprylo - Premium Fashion Store | Designer Clothing for Men, Women & Children',
+    template: '%s | Aprylo - Premium Fashion Store'
   },
-  description: 'Discover the latest fashion trends with VB Cart. Premium designer clothing, accessories, and lifestyle products for men, women, and children. Fast shipping, easy returns, and exceptional quality.',
+  description: 'Discover the latest fashion trends with Aprylo. Premium designer clothing, accessories, and lifestyle products for men, women, and children. Fast shipping, easy returns, and exceptional quality.',
   keywords: [
-    'fashion', 'clothing', 'ecommerce', 'VB Cart', 'premium fashion',
+    'fashion', 'clothing', 'ecommerce', 'Aprylo', 'premium fashion',
     'designer clothes', 'men fashion', 'women fashion', 'children clothing',
     'online shopping', 'fashion store', 'trendy clothes', 'quality apparel',
     'fashion accessories', 'lifestyle products', 'brand clothing'
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 ### A. Google Business Profile
 1. **Create/Claim Google Business Profile**
    - Go to [Google Business Profile](https://business.google.com)
-   - Search for "VB Cart" and claim if exists, or create new
+   - Search for "Aprylo" and claim if exists, or create new
    - Add your logo as the business photo
    - Complete all business information
 
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
    ```json
    {
      "@type": "Organization",
-     "name": "VB Cart",
+     "name": "Aprylo",
      "logo": "https://vbcart.com/logos/vb_logo.png",
      "url": "https://vbcart.com"
    }
@@ -82,7 +82,7 @@ openGraph: {
       url: '/logos/vb_logo.png',
       width: 1200,
       height: 630,
-      alt: 'VB Cart Logo - Premium Fashion Store',
+      alt: 'Aprylo Logo - Premium Fashion Store',
     },
   ],
 },
@@ -208,4 +208,4 @@ Update in `/src/components/seo/structured-data.tsx`:
 - Review and refresh all metadata
 - Analyze and update keyword strategy
 
-This comprehensive SEO setup will significantly improve your search engine visibility and help establish VB Cart as a recognized fashion brand online.
+This comprehensive SEO setup will significantly improve your search engine visibility and help establish Aprylo as a recognized fashion brand online.

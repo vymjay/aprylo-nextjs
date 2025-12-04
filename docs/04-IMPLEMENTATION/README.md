@@ -1,6 +1,6 @@
 # Implementation
 
-This section contains implementation guides, optimization strategies, and detailed technical documentation for developers working on the VB Cart project.
+This section contains implementation guides, optimization strategies, and detailed technical documentation for developers working on the Aprylo project.
 
 ## 📋 Contents
 

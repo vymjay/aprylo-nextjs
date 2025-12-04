@@ -2,7 +2,7 @@
 
 ## Overview
 
-VB Cart uses a modern component-based architecture with React, TypeScript, and Tailwind CSS. The component library is built on top of Radix UI primitives for accessibility and consistency.
+Aprylo uses a modern component-based architecture with React, TypeScript, and Tailwind CSS. The component library is built on top of Radix UI primitives for accessibility and consistency.
 
 ## Design System
 

@@ -34,7 +34,7 @@ export default function NotFound() {
 
         <div className="mt-8 pt-8 border-t border-gray-200">
           <Link href="/" className="text-primary hover:text-primary/80 font-medium">
-            VB Cart - Fashion Store
+            Aprylo - Fashion Store
           </Link>
         </div>
       </div>

@@ -1,7 +1,7 @@
 # User Data Consistency Review & Fixes
 
 ## Overview
-Comprehensive review and fixes applied to ensure consistent user data usage throughout the VB Cart application, particularly focusing on account dropdown, customer data, and admin data management.
+Comprehensive review and fixes applied to ensure consistent user data usage throughout the Aprylo application, particularly focusing on account dropdown, customer data, and admin data management.
 
 ## Issues Identified & Fixed
 

@@ -8,8 +8,8 @@ export const dynamic = 'force-static'
 export const revalidate = 3600 // Revalidate every hour
 
 export const metadata: Metadata = {
-  title: 'Home | VB Cart - Premium Fashion Store',
-  description: 'Discover the latest fashion trends with VB Cart. Premium designer clothing for men, women, and children.',
+  title: 'Home | Aprylo - Premium Fashion Store',
+  description: 'Discover the latest fashion trends with Aprylo. Premium designer clothing for men, women, and children.',
   other: {
     // Preload critical category images for faster loading
     'preload-men': 'link rel="preload" href="/models/optimized/men-800.jpg" as="image" fetchpriority="high"',

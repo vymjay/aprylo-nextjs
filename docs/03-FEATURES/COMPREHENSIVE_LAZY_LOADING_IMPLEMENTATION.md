@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document summarizes the complete lazy loading implementation across all screens and components in the VB Cart application. Every major page now uses lazy loading to improve performance and user experience.
+This document summarizes the complete lazy loading implementation across all screens and components in the Aprylo application. Every major page now uses lazy loading to improve performance and user experience.
 
 ## Implementation Summary
 

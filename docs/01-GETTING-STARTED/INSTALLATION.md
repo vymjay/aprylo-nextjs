@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Before setting up VB Cart, ensure you have the following installed:
+Before setting up Aprylo, ensure you have the following installed:
 
 - **Node.js**: Version 18.0.0 or higher
 - **npm**: Version 8.0.0 or higher (comes with Node.js)
@@ -59,7 +59,7 @@ Edit `.env.local` with your configuration:
 
 ```env
 # App Configuration
-NEXT_PUBLIC_APP_NAME="VB Cart"
+NEXT_PUBLIC_APP_NAME="Aprylo"
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 NODE_ENV="development"
 
@@ -421,4 +421,4 @@ If you encounter issues:
 
 ---
 
-*Installation complete! Ready to start developing with VB Cart.*
+*Installation complete! Ready to start developing with Aprylo.*

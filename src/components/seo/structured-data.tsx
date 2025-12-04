@@ -16,7 +16,7 @@ export function StructuredData({
   const defaultOrganizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "VB Cart",
+    "name": "Aprylo",
     "description": "Premium fashion store offering designer clothing for men, women, and children",
     "url": "https://vbcart.com", // Replace with your actual domain
     "logo": "https://vbcart.com/logos/vb_logo.png", // Replace with your actual domain
@@ -45,12 +45,12 @@ export function StructuredData({
   const defaultWebsiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "VB Cart",
+    "name": "Aprylo",
     "url": "https://vbcart.com", // Replace with your actual domain
     "description": "Premium fashion store offering designer clothing for men, women, and children",
     "publisher": {
       "@type": "Organization",
-      "name": "VB Cart"
+      "name": "Aprylo"
     },
     "potentialAction": {
       "@type": "SearchAction",
@@ -62,7 +62,7 @@ export function StructuredData({
   const ecommerceData = {
     "@context": "https://schema.org",
     "@type": "Store",
-    "name": "VB Cart",
+    "name": "Aprylo",
     "description": "Premium fashion store offering designer clothing for men, women, and children",
     "url": "https://vbcart.com", // Replace with your actual domain
     "image": "https://vbcart.com/logos/vb_logo.png", // Replace with your actual domain

@@ -9,7 +9,7 @@
 - `Failed to submit review` due to RLS policy violations
 
 **Root Cause**: 
-VB Cart uses a separate User table with foreign key to Supabase Auth users, but the API endpoints were using Supabase user IDs directly instead of mapping to internal User table IDs.
+Aprylo uses a separate User table with foreign key to Supabase Auth users, but the API endpoints were using Supabase user IDs directly instead of mapping to internal User table IDs.
 
 **Solution**:
 Updated all review-related API endpoints to properly map Supabase Auth user IDs to internal User table IDs.

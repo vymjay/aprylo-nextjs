@@ -21,7 +21,7 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight text-center">
             <span className="block">Welcome to</span>
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              VB Cart
+              Aprylo
             </span>
           </h1>
 

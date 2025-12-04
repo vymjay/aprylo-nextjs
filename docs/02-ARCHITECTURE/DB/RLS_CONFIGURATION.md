@@ -1,8 +1,8 @@
-# Row Level Security (RLS) Configuration for VB Cart
+# Row Level Security (RLS) Configuration for Aprylo
 
 ## Overview
 
-VB Cart uses a separate User table with foreign key relationships to Supabase Auth users. This document outlines the required RLS policies to ensure proper security while allowing the review system to function correctly.
+Aprylo uses a separate User table with foreign key relationships to Supabase Auth users. This document outlines the required RLS policies to ensure proper security while allowing the review system to function correctly.
 
 ## Database Architecture
 

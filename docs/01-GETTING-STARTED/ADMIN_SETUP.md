@@ -1,8 +1,8 @@
-# VB Cart Admin Panel Setup Guide
+# Aprylo Admin Panel Setup Guide
 
 ## Overview
 
-This guide will help you set up and use the VB Cart Admin Panel for managing your e-commerce store.
+This guide will help you set up and use the Aprylo Admin Panel for managing your e-commerce store.
 
 ## Quick Setup
 

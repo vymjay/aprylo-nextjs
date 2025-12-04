@@ -1,6 +1,6 @@
 # Getting Started
 
-This section contains essential information for new developers to get up and running with the VB Cart project.
+This section contains essential information for new developers to get up and running with the Aprylo project.
 
 ## 📋 Contents
 

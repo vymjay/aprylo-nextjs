@@ -1,7 +1,7 @@
 {
   "name": "vb-cart",
   "version": "1.0.0",
-  "description": "VB Cart - Premium Fashion E-commerce Platform",
+  "description": "Aprylo - Premium Fashion E-commerce Platform",
   "private": true,
   "scripts": {
     "dev": "next dev",

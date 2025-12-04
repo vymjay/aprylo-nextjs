@@ -2,7 +2,7 @@
 
 ## Overview
 
-VB Cart uses PostgreSQL with Supabase as the database provider. The schema is designed for scalability and performance with proper indexing and relationships.
+Aprylo uses PostgreSQL with Supabase as the database provider. The schema is designed for scalability and performance with proper indexing and relationships.
 
 ## Database Configuration
 

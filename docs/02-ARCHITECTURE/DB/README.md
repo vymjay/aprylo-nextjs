@@ -1,6 +1,6 @@
 # Database Documentation
 
-This directory contains comprehensive database documentation for VB Cart, covering schema design, migrations, and data management strategies.
+This directory contains comprehensive database documentation for Aprylo, covering schema design, migrations, and data management strategies.
 
 ## 📚 Documentation Overview
 
@@ -11,7 +11,7 @@ This directory contains comprehensive database documentation for VB Cart, coveri
 
 ## 🗄️ Database Architecture
 
-VB Cart uses **PostgreSQL** with **Supabase** as the database provider, featuring:
+Aprylo uses **PostgreSQL** with **Supabase** as the database provider, featuring:
 
 - **Scalable Schema**: Designed for e-commerce with proper indexing
 - **Row Level Security (RLS)**: Secure data access policies
@@ -208,4 +208,4 @@ DATABASE_URL=your-database-url
 
 ---
 
-*Comprehensive database documentation for VB Cart e-commerce platform.*
+*Comprehensive database documentation for Aprylo e-commerce platform.*

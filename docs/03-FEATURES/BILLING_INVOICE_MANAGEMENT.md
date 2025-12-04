@@ -2,7 +2,7 @@
 
 ## Overview
 
-The VB Cart billing system provides comprehensive invoice management capabilities, allowing users to view, download, and manage their order invoices seamlessly.
+The Aprylo billing system provides comprehensive invoice management capabilities, allowing users to view, download, and manage their order invoices seamlessly.
 
 ## Features
 

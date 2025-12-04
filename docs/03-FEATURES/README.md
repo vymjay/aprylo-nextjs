@@ -1,6 +1,6 @@
 # Features
 
-This section contains detailed documentation of all implemented features and functionality in the VB Cart application.
+This section contains detailed documentation of all implemented features and functionality in the Aprylo application.
 
 ## 📋 Implemented Features
 

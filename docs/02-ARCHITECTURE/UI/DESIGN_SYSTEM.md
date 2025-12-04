@@ -2,7 +2,7 @@
 
 ## Overview
 
-VB Cart's design system provides a comprehensive set of design principles, components, and guidelines to ensure consistency and cohesiveness across the entire application.
+Aprylo's design system provides a comprehensive set of design principles, components, and guidelines to ensure consistency and cohesiveness across the entire application.
 
 ## Design Principles
 
@@ -618,4 +618,4 @@ export const tokens = {
 
 ---
 
-*This design system ensures consistent, accessible, and beautiful user interfaces across all VB Cart components.*
+*This design system ensures consistent, accessible, and beautiful user interfaces across all Aprylo components.*

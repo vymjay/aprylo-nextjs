@@ -11,7 +11,7 @@ You need to add the following icon files to this directory:
 - icon-384x384.png
 - icon-512x512.png
 
-These should be square PNG images with the VB Cart logo.
+These should be square PNG images with the Aprylo logo.
 
 You can use online tools like:
 - https://realfavicongenerator.net/

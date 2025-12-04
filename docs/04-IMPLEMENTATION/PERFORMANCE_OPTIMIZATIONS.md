@@ -2,7 +2,7 @@
 
 ## Summary of Changes
 
-I've implemented comprehensive performance optimizations for your VB Cart home page to significantly reduce loading time while maintaining the existing `/home` route structure.
+I've implemented comprehensive performance optimizations for your Aprylo home page to significantly reduce loading time while maintaining the existing `/home` route structure.
 
 ## 1. 🚀 Server-Side Rendering (SSR)
 
