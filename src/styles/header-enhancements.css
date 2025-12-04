@@ -1,0 +1,297 @@
+/* Header and Navigation UX Enhancements */
+
+/* Enhanced focus states for better accessibility */
+.focus-ring {
+  @apply outline-none;
+}
+
+.focus-ring:focus-visible {
+  @apply ring-2 ring-blue-500 ring-offset-2 rounded;
+}
+
+/* Smooth transitions for interactive elements */
+.header-transition {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced dropdown animations */
+.dropdown-enter {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+}
+
+.dropdown-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-exit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.dropdown-exit-active {
+  opacity: 0;
+  transform: translateY(-8px) scale(0.95);
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile menu slide animation */
+.mobile-menu-enter {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mobile-menu-enter-active {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-exit {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Search input enhancements */
+.search-input:focus-within .search-icon {
+  @apply text-blue-500 scale-110;
+}
+
+.search-input:focus-within {
+  @apply shadow-lg ring-4 ring-blue-500/10;
+}
+
+/* Loading skeleton animation */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Enhanced button hover effects */
+.button-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.button-hover:hover::before {
+  left: 100%;
+}
+
+/* Badge pulse animation for cart items */
+.cart-badge-pulse {
+  animation: pulse-scale 2s infinite;
+}
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Enhanced category button states */
+.category-button {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.category-button.active::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+  animation: expand 0.3s ease-out;
+}
+
+@keyframes expand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Search result hover enhancement */
+.search-result:hover .search-result-image {
+  transform: scale(1.05);
+}
+
+.search-result-image {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Mobile menu backdrop blur */
+.mobile-backdrop {
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced dropdown shadow */
+.dropdown-shadow {
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .header-transition,
+  .dropdown-enter-active,
+  .dropdown-exit-active,
+  .mobile-menu-enter-active,
+  .mobile-menu-exit-active,
+  .search-result-image,
+  .category-button {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .focus-ring:focus-visible {
+    @apply ring-4 ring-blue-600;
+  }
+  
+  .dropdown-shadow {
+    border: 2px solid #000;
+  }
+}
+
+/* Dark mode preparations (for future use) */
+@media (prefers-color-scheme: dark) {
+  .skeleton {
+    background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  }
+}
+
+/* Print styles */
+@media print {
+  .dropdown-shadow,
+  .mobile-menu-enter-active,
+  .search-input {
+    display: none !important;
+  }
+}
+
+/* Mobile scroll optimizations for search results */
+.mobile-search-scroll {
+  /* Optimize scrolling on mobile devices */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  scroll-behavior: smooth;
+}
+
+/* Prevent page scroll during search interactions */
+.search-dropdown-container {
+  /* Use GPU acceleration to prevent layout thrashing */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  /* Ensure dropdown doesn't affect document flow */
+  position: absolute;
+  /* Prevent any potential scroll triggering */
+  contain: layout style paint;
+}
+
+/* Prevent scroll behavior from search input */
+.search-dropdown-container input {
+  /* Disable any scroll behaviors */
+  scroll-behavior: auto !important;
+  -webkit-scroll-behavior: auto !important;
+  /* Prevent focus scrolling */
+  scroll-margin: 0 !important;
+  scroll-snap-align: none !important;
+}
+
+/* Disable scroll restoration during search */
+.search-active {
+  scroll-behavior: auto !important;
+  -webkit-scroll-behavior: auto !important;
+}
+
+/* Prevent body scroll when search dropdown is open on mobile */
+@media (max-width: 768px) {
+  .search-dropdown-open {
+    overflow: hidden;
+  }
+  
+  .mobile-search-results {
+    /* Better mobile viewport handling */
+    max-height: 60vh;
+    /* Prevent overscroll effects */
+    overscroll-behavior: contain;
+    /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  /* Enhanced touch target sizes for mobile */
+  .search-result-mobile {
+    min-height: 44px; /* iOS recommended minimum touch target */
+  }
+}
+
+/* Enhanced focus indicators for keyboard navigation */
+.search-result:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.2);
+  /* Ensure focus is visible even with custom backgrounds */
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth transitions for better perceived performance */
+.search-loading {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.search-results-enter {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.search-results-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
