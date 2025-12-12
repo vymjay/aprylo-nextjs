@@ -1,16 +1,14 @@
 import { NextResponse } from "next/server";
-import { createPublicClient } from "@/lib/supabase/api-client";
+import { createOptionalAuthClient } from "@/lib/supabase/api-client";
 
 export async function GET() {
   try {
-    const { supabase } = await createPublicClient();
+    const { supabase, user } = await createOptionalAuthClient();
     
-    // Get the current user from the session
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
-    
-    if (authError || !user) {
-      console.error('Auth error in internal-id:', authError);
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    // If no user session, return null instead of error
+    // This allows the client to handle the unauthenticated state gracefully
+    if (!user) {
+      return NextResponse.json({ id: null }, { status: 200 });
     }
 
     // Get internal user ID from the User table

@@ -1,9 +1,9 @@
+/* Header and Navigation UX Enhancements */
+@import '../styles/header-enhancements.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Header and Navigation UX Enhancements */
-@import '../styles/header-enhancements.css';
 
 @layer base {
   :root {

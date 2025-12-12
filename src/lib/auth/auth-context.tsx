@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react'
 import { User as SupabaseUser, UserMetadata } from '@supabase/supabase-js'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { createBrowserClient } from '@supabase/ssr'
 import { forceLogoutCleanup } from './logout-utils'
 import { useQueryClient } from '@tanstack/react-query'
 import { AUTH_KEYS, USER_KEYS } from '@/hooks/api/use-users'
@@ -30,7 +30,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const queryClient = useQueryClient()
 
   useEffect(() => {
-    const supabase = createClientComponentClient()
+    const supabase = createBrowserClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    )
     
     const getUser = async () => {
       try {
@@ -133,7 +136,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       queryClient.removeQueries({ queryKey: USER_KEYS.currentAddresses() })
       
       // Get Supabase client
-      const supabase = createClientComponentClient()
+      const supabase = createBrowserClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+      )
       
       // Sign out from Supabase first
       console.log('Auth Context - Signing out from Supabase') // Debug log
@@ -189,7 +195,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       console.error('Auth Context - Logout error:', error)
       
       // Still try to clean up client-side state even if everything fails
-      const supabase = createClientComponentClient()
+      const supabase = createBrowserClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+      )
       await supabase.auth.signOut({ scope: 'global' })
       
       // Force cleanup even on error

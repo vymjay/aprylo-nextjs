@@ -7,7 +7,7 @@ interface StarRatingProps {
 }
 
 export default function StarRating({ rating, maxStars = 5 }: StarRatingProps) {
-  const stars: JSX.Element[] = []
+  const stars: React.ReactElement[] = []
 
   for (let i = 1; i <= maxStars; i++) {
     if (i <= Math.floor(rating)) {
