@@ -1,4 +1,4 @@
-import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
+import { createServerClient } from "@supabase/ssr";
 import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
@@ -26,9 +26,53 @@ export async function createPublicClient(): Promise<UnauthenticatedClient> {
   // Dynamic import to avoid bundling issues
   const { cookies } = await import("next/headers");
   const cookieStore = await cookies();
-  const supabase = createRouteHandlerClient({
-    cookies: (): any => cookieStore,
-  });
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+        setAll(cookiesToSet) {
+          try {
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options)
+            );
+          } catch {
+            // The `setAll` method was called from a Server Component.
+            // This can be ignored if you have middleware refreshing
+            // user sessions.
+          }
+        },
+      },
+      global: {
+        fetch: (url: RequestInfo | URL, options: RequestInit = {}) => {
+          // Create AbortController for timeout (30 seconds)
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 30000);
+          
+          // Merge with existing signal if present
+          const signal = options.signal 
+            ? (() => {
+                const existingSignal = options.signal;
+                if (existingSignal) {
+                  existingSignal.addEventListener('abort', () => controller.abort());
+                }
+                return controller.signal;
+              })()
+            : controller.signal;
+          
+          return fetch(url, {
+            ...options,
+            signal,
+          }).finally(() => {
+            clearTimeout(timeoutId);
+          });
+        },
+      },
+    }
+  );
   return { supabase: supabase as SupabaseClient };
 }
 
@@ -40,9 +84,53 @@ export async function createAuthenticatedClient(): Promise<AuthenticatedClient> 
   // Dynamic import to avoid bundling issues
   const { cookies } = await import("next/headers");
   const cookieStore = await cookies();
-  const supabase = createRouteHandlerClient({
-    cookies: (): any => cookieStore,
-  });
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+        setAll(cookiesToSet) {
+          try {
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options)
+            );
+          } catch {
+            // The `setAll` method was called from a Server Component.
+            // This can be ignored if you have middleware refreshing
+            // user sessions.
+          }
+        },
+      },
+      global: {
+        fetch: (url: RequestInfo | URL, options: RequestInit = {}) => {
+          // Create AbortController for timeout (30 seconds)
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 30000);
+          
+          // Merge with existing signal if present
+          const signal = options.signal 
+            ? (() => {
+                const existingSignal = options.signal;
+                if (existingSignal) {
+                  existingSignal.addEventListener('abort', () => controller.abort());
+                }
+                return controller.signal;
+              })()
+            : controller.signal;
+          
+          return fetch(url, {
+            ...options,
+            signal,
+          }).finally(() => {
+            clearTimeout(timeoutId);
+          });
+        },
+      },
+    }
+  );
   const {
     data: { user },
     error,
@@ -64,9 +152,53 @@ export async function createOptionalAuthClient(): Promise<{
   // Dynamic import to avoid bundling issues
   const { cookies } = await import("next/headers");
   const cookieStore = await cookies();
-  const supabase = createRouteHandlerClient({
-    cookies: (): any => cookieStore,
-  });
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+        setAll(cookiesToSet) {
+          try {
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options)
+            );
+          } catch {
+            // The `setAll` method was called from a Server Component.
+            // This can be ignored if you have middleware refreshing
+            // user sessions.
+          }
+        },
+      },
+      global: {
+        fetch: (url: RequestInfo | URL, options: RequestInit = {}) => {
+          // Create AbortController for timeout (30 seconds)
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 30000);
+          
+          // Merge with existing signal if present
+          const signal = options.signal 
+            ? (() => {
+                const existingSignal = options.signal;
+                if (existingSignal) {
+                  existingSignal.addEventListener('abort', () => controller.abort());
+                }
+                return controller.signal;
+              })()
+            : controller.signal;
+          
+          return fetch(url, {
+            ...options,
+            signal,
+          }).finally(() => {
+            clearTimeout(timeoutId);
+          });
+        },
+      },
+    }
+  );
   const {
     data: { user },
   } = await supabase.auth.getUser();

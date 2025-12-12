@@ -30,7 +30,7 @@ export default function VirtualScroll<T>({
   const [scrollTop, setScrollTop] = useState(0)
   const [isScrolling, setIsScrolling] = useState(false)
   const scrollElementRef = useRef<HTMLDivElement>(null)
-  const scrollingTimeoutId = useRef<NodeJS.Timeout>()
+  const scrollingTimeoutId = useRef<NodeJS.Timeout | undefined>(undefined)
 
   // Calculate visible range
   const visibleRange = useMemo(() => {

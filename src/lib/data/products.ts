@@ -8,6 +8,44 @@ interface ProductFilters {
   limit?: number
 }
 
+/**
+ * Retry helper for database queries with exponential backoff
+ */
+async function retryQuery<T>(
+  queryFn: () => Promise<T>,
+  maxRetries = 3,
+  delay = 1000
+): Promise<T> {
+  let lastError: Error | unknown;
+  
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      return await queryFn();
+    } catch (error: any) {
+      lastError = error;
+      
+      // Check if it's a network/timeout error
+      const isNetworkError = 
+        error?.message?.includes('fetch failed') ||
+        error?.message?.includes('timeout') ||
+        error?.message?.includes('CONNECT_TIMEOUT') ||
+        error?.code === 'UND_ERR_CONNECT_TIMEOUT';
+      
+      // Only retry on network errors
+      if (!isNetworkError || attempt === maxRetries - 1) {
+        throw error;
+      }
+      
+      // Exponential backoff: 1s, 2s, 4s
+      const waitTime = delay * Math.pow(2, attempt);
+      console.warn(`Database query failed (attempt ${attempt + 1}/${maxRetries}), retrying in ${waitTime}ms...`, error?.message);
+      await new Promise(resolve => setTimeout(resolve, waitTime));
+    }
+  }
+  
+  throw lastError;
+}
+
 export const getProducts = async (filters?: ProductFilters): Promise<Product[]> => {
   try {
     // During build time, return empty array to prevent build errors
@@ -36,12 +74,17 @@ export const getProducts = async (filters?: ProductFilters): Promise<Product[]> 
 
       // Apply category filter using the same logic as API route
       if (filters?.category) {
-        // Get category ID from slug first
-        const { data: categoryData } = await supabase
-          .from("Category")
-          .select("id")
-          .eq("slug", filters.category.toLowerCase())
-          .single();
+        // Get category ID from slug first with retry
+        const categoryData = await retryQuery(async () => {
+          const { data, error } = await supabase
+            .from("Category")
+            .select("id")
+            .eq("slug", filters.category!.toLowerCase())
+            .single();
+          
+          if (error) throw error;
+          return data;
+        });
         
         if (categoryData) {
           query = query.eq("categoryId", categoryData.id);
@@ -59,10 +102,27 @@ export const getProducts = async (filters?: ProductFilters): Promise<Product[]> 
         query = query.limit(filters.limit);
       }
 
-      const { data: products, error } = await query;
+      // Execute query with retry logic
+      const { data: products, error } = await retryQuery(async () => {
+        const queryResult = await query;
+        if (queryResult.error) {
+          throw queryResult.error;
+        }
+        return queryResult;
+      }).catch((error) => {
+        // If retry fails, return error structure
+        return { data: null, error };
+      });
 
       if (error) {
-        console.error('Database error in getProducts:', error);
+        // Log error but don't throw - return empty array for graceful degradation
+        const errorDetails = error as any;
+        console.error('Database error in getProducts:', {
+          message: errorDetails?.message || 'Unknown error',
+          details: errorDetails?.details,
+          hint: errorDetails?.hint,
+          code: errorDetails?.code
+        });
         return [];
       }
 
@@ -116,18 +176,26 @@ export const getProductById = cache(async (id: string): Promise<Product | null> 
       const { createPublicClient } = await import('@/lib/supabase/api-client');
       const { supabase } = await createPublicClient();
 
-      const { data: product, error } = await supabase
-        .from("Product")
-        .select(`
-          *,
-          category:categoryId (
-            id,
-            name,
-            slug
-          )
-        `)
-        .eq("id", id)
-        .single();
+      // Execute query with retry logic
+      const result = await retryQuery(async () => {
+        const queryResult = await supabase
+          .from("Product")
+          .select(`
+            *,
+            category:categoryId (
+              id,
+              name,
+              slug
+            )
+          `)
+          .eq("id", id)
+          .single();
+        
+        if (queryResult.error) throw queryResult.error;
+        return queryResult;
+      });
+      
+      const { data: product, error } = result;
 
       if (error) {
         console.error('Database error in getProductById:', error);

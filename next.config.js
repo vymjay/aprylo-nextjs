@@ -28,18 +28,25 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
+  // Explicit Turbopack configuration for Next.js 16
+  turbopack: {},
+  
   // Experimental features for better performance
   experimental: {
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-    // Enable turbo for faster builds
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+    optimizePackageImports: [
+      'lucide-react',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-select',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-toast',
+      'framer-motion',
+      '@tanstack/react-query',
+      'tailwind-merge',
+      'class-variance-authority'
+    ],
+    // Improve tree shaking
+    optimizeServerReact: true,
   },
   
   // Optimize images
@@ -61,58 +68,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
-  // Webpack optimizations for code splitting
-  webpack: (config, { dev, isServer }) => {
-    // Optimize for production
-    if (!dev && !isServer) {
-      config.optimization = {
-        ...config.optimization,
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-            },
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-            },
-          },
-        },
-      };
-    }
-    
-    return config;
-  },
-
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
-
-  // Optimize bundle size
-  experimental: {
-    optimizePackageImports: [
-      'lucide-react',
-      '@radix-ui/react-dialog',
-      '@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-select',
-      '@radix-ui/react-slot',
-      '@radix-ui/react-toast',
-      'framer-motion',
-      '@tanstack/react-query',
-      'tailwind-merge',
-      'class-variance-authority'
-    ],
-    // Improve tree shaking
-    optimizeServerReact: true,
-  },
-
+  // Webpack optimizations for code splitting (used when --webpack flag is used)
   webpack: (config, { dev, isServer }) => {
     config.ignoreWarnings = [
       {
@@ -122,27 +78,34 @@ const nextConfig = {
 
     // Optimize for production
     if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          default: false,
-          vendors: false,
-          vendor: {
-            name: 'vendor',
-            chunks: 'all',
-            test: /node_modules/,
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            vendor: {
+              name: 'vendor',
+              chunks: 'all',
+              test: /node_modules/,
+            },
+            common: {
+              name: 'common',
+              minChunks: 2,
+              chunks: 'all',
+              enforce: true,
+            },
           },
         },
       };
     }
 
     return config;
+  },
+
+  typescript: {
+    ignoreBuildErrors: false,
   },
   
   // Headers for better caching
