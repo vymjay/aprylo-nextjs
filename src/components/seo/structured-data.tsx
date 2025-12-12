@@ -18,13 +18,11 @@ export function StructuredData({
     "@type": "Organization",
     "name": "Aprylo",
     "description": "Premium fashion store offering designer clothing for men, women, and children",
-    "url": "https://vbcart.com", // Replace with your actual domain
-    "logo": "https://vbcart.com/logos/vb_logo.png", // Replace with your actual domain
-    "image": "https://vbcart.com/logos/vb_logo.png", // Replace with your actual domain
+    "url": "https://aprylo.com", // Replace with your actual domain
     "sameAs": [
-      "https://www.facebook.com/vbcart", // Replace with your actual social media
-      "https://www.instagram.com/vbcart",
-      "https://www.twitter.com/vbcart"
+      "https://www.facebook.com/aprylo", // Replace with your actual social media
+      "https://www.instagram.com/aprylo",
+      "https://www.twitter.com/aprylo"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -46,7 +44,7 @@ export function StructuredData({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Aprylo",
-    "url": "https://vbcart.com", // Replace with your actual domain
+    "url": "https://aprylo.com", // Replace with your actual domain
     "description": "Premium fashion store offering designer clothing for men, women, and children",
     "publisher": {
       "@type": "Organization",
@@ -54,7 +52,7 @@ export function StructuredData({
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://vbcart.com/search?q={search_term_string}", // Replace with your actual domain
+      "target": "https://aprylo.com/search?q={search_term_string}", // Replace with your actual domain
       "query-input": "required name=search_term_string"
     }
   }
@@ -64,8 +62,7 @@ export function StructuredData({
     "@type": "Store",
     "name": "Aprylo",
     "description": "Premium fashion store offering designer clothing for men, women, and children",
-    "url": "https://vbcart.com", // Replace with your actual domain
-    "image": "https://vbcart.com/logos/vb_logo.png", // Replace with your actual domain
+    "url": "https://aprylo.com", // Replace with your actual domain
     "priceRange": "$$",
     "paymentAccepted": "Credit Card, Debit Card, PayPal, Razorpay",
     "currenciesAccepted": "USD, INR",

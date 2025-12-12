@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { ShoppingCart, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -90,15 +89,7 @@ export default function Header() {
               className="flex items-center flex-shrink-0 group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
               aria-label="Aprylo - Go to homepage"
             >
-              <Image
-                src="/logos/vb_logo.png"
-                alt="Aprylo Logo"
-                width={40}
-                height={40}
-                className="h-10 w-auto group-hover:scale-105 transition-transform duration-300"
-                priority
-              />
-              <span className="ml-3 text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hidden sm:block tracking-wide">
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent tracking-wide">
                 Aprylo
               </span>
             </Link>

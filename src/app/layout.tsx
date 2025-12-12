@@ -51,21 +51,12 @@ export const metadata: Metadata = {
     title: 'Aprylo - Premium Fashion Store',
     description: 'Discover the latest fashion trends with Aprylo. Premium designer clothing for men, women, and children.',
     siteName: 'Aprylo',
-    images: [
-      {
-        url: '/logos/vb_logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Aprylo Logo - Premium Fashion Store',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Aprylo - Premium Fashion Store',
     description: 'Discover the latest fashion trends with Aprylo. Premium designer clothing for men, women, and children.',
-    images: ['/logos/vb_logo.png'],
-    creator: '@vbcart', // Replace with your actual Twitter handle
+    creator: '@aprylo', // Replace with your actual Twitter handle
   },
   robots: {
     index: true,
